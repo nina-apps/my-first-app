@@ -72,7 +72,7 @@ function updateApp() {
 
     document.getElementById("total").innerText = total;
 
-    document.getElementById("balance").innerText = 1000 - total;
+    document.getElementById("balance").innerText = 3800 - total;
 
 
     let categoryHTML = "";
