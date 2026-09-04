@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Expenses</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="My Expenses">
+</head>
+
+<body>
+
+<div class="app">
+
+    <h1>My Expenses 👋</h1>
+    <p>Track your spending</p>
+
+    <div class="budget-card">
+        <p>Monthly Budget</p>
+        <h2>RM 1000</h2>
+        <p>Total Spent: RM <span id="total">0</span></p>
+        <p>Remaining: RM <span id="balance">1000</span></p>
+    </div>
+
+    <h2>Add Expense</h2>
+
+    <label>Expense Name</label>
+    <input type="text" id="expenseName" placeholder="e.g. Lunch">
+
+    <br><br>
+
+    <label>Amount (RM)</label>
+    <input type="number" id="expenseAmount" placeholder="e.g. 15">
+
+    <br><br>
+
+    <label>Category</label>
+    <select id="expenseCategory">
+        <option value="Food">Food 🍔</option>
+        <option value="Petrol">Petrol 🚗</option>
+        <option value="Shopping">Shopping 🛍️</option>
+        <option value="Bills">Bills 🏠</option>
+        <option value="Pets">Pets 🐱</option>
+        <option value="Others">Others 📦</option>
+    </select>
+
+    <button onclick="addExpense()">＋ Add Expense</button>
+
+    <h2>Recent Expenses</h2>
+
+    <div id="expenseList"></div>
+
+    <h2>Category Summary</h2>
+
+    <div id="categoryTotals" class="category-grid"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
